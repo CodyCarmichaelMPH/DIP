@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disease Intelligence Program</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS and JS for mapping -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Projection libraries for transforming State Plane to WGS84 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.1/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.js"></script>
+    
+    <!-- Theme detection script to prevent flashbang -->
+    <script>
+      (function() {
+        // Get theme from localStorage or system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        
+        // Apply theme immediately to prevent flash
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.body.style.backgroundColor = '#111827'; // gray-900
+          document.body.style.color = '#ffffff';
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.body.style.backgroundColor = '#f9fafb'; // gray-50
+          document.body.style.color = '#111827';
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-291ee24a.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/vendor-fb33f09a.js">
+    <link rel="modulepreload" crossorigin href="/assets/router-949a6c93.js">
+    <link rel="modulepreload" crossorigin href="/assets/ui-bf344396.js">
+    <link rel="modulepreload" crossorigin href="/assets/charts-62dd5dec.js">
+    <link rel="stylesheet" href="/assets/index-d70175a6.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+  </body>
+</html>

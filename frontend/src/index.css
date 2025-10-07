@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Leaflet marker styles */
+.custom-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.facility-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.facility-marker.child-care {
+  background-color: #10b981;
+}
+
+.facility-marker.nursing-home {
+  background-color: #ef4444;
+}
+
+.facility-marker.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  transform: scale(1.2);
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+    @apply disabled:opacity-50 disabled:pointer-events-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-900 hover:bg-secondary-200;
+  }
+  
+  .btn-outline {
+    @apply border border-secondary-300 bg-transparent hover:bg-secondary-50;
+  }
+  
+  .card {
+    @apply rounded-lg border border-secondary-200 dark:border-secondary-700 bg-white dark:bg-gray-800 p-6 shadow-sm;
+  }
+  
+  .input {
+    @apply flex h-10 w-full rounded-md border border-secondary-300 dark:border-secondary-600;
+    @apply bg-white dark:bg-gray-700 px-3 py-2 text-sm text-gray-900 dark:text-white;
+    @apply file:border-0 file:bg-transparent file:text-sm file:font-medium;
+    @apply placeholder:text-secondary-500 dark:placeholder:text-secondary-400;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .label {
+    @apply text-sm font-medium leading-none text-gray-700 dark:text-gray-300;
+    @apply peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  }
+}

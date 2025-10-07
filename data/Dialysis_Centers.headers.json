@@ -1,0 +1,31 @@
+{
+  "topLevel": [
+    "type",
+    "name",
+    "crs",
+    "features"
+  ],
+  "featureKeys": [
+    "type",
+    "properties",
+    "geometry"
+  ],
+  "propertyKeys": [
+    "X",
+    "Y",
+    "FID",
+    "CalcLocati",
+    "CalcLoca_1",
+    "CalcLoca_2",
+    "Name",
+    "Address",
+    "City",
+    "State",
+    "Zip",
+    "formated_p",
+    "Status",
+    "Icon",
+    "Type_",
+    "ObjectId"
+  ]
+}

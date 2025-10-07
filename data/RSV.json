@@ -1,0 +1,105 @@
+{
+  "disease_name": "Respiratory Syncytial Virus (RSV)",
+  "parameters": {
+    "transmissibility_base": "XXX",
+    "r0": "XXX",
+    "incubation_period_days": {
+      "mean": "XXX",
+      "std": "XXX",
+      "sigma": "XXX"
+    },
+    "infectious_period_days": {
+      "mean": "XXX",
+      "std": "XXX",
+      "gamma": "XXX"
+    },
+    "mortality_rate": "XXX",
+    "detection_multiplier": "XXX",
+    "severity": {
+      "age_0_4": "XXX",
+      "age_5_17": "XXX",
+      "age_18_49": "XXX",
+      "age_50_64": "XXX",
+      "age_65_plus": "XXX"
+    },
+    "hospitalization_risk": {
+      "age_0_4": "XXX",
+      "age_5_17": "XXX",
+      "age_18_49": "XXX",
+      "age_50_64": "XXX",
+      "age_65_plus": "XXX"
+    },
+    "waning_immunity_days": {
+      "natural": "XXX",
+      "vaccine": "XXX"
+    },
+    "vaccine_effectiveness": {
+      "transmission": "XXX",
+      "severity": "XXX"
+    },
+    "seasonal_forcing": {
+      "amplitude": "XXX",
+      "peak_month": "XXX",
+      "seasonal_factor": "XXX",
+      "peak_weeks": "XXX"
+    },
+    "pierce_county_calibrated": {
+      "population_size": 928696,
+      "vaccination_coverage": 0.15,
+      "expected_annual_cases": 23000,
+      "expected_annual_deaths": 7,
+      "case_fatality_rate": 0.0003,
+      "attack_rate": 0.025,
+      "initial_prevalence": 0.0005,
+      "transmission_rate": 0.12,
+      "recovery_rate": 0.125,
+      "mortality_rate": 0.0003,
+      "r0": 1.5,
+      "seasonal_factor": 3.5,
+      "age_specific_risk": {
+        "0-17": 5.0,
+        "18-64": 0.3,
+        "65+": 3.0
+      },
+      "peak_weeks": [47, 48, 49, 50, 51, 52]
+    }
+  },
+  "contact_layers": {
+    "household": "XXX",
+    "workplace": "XXX",
+    "school": "XXX",
+    "community": "XXX",
+    "nursing_home": "XXX",
+    "hospital": "XXX",
+    "childcare": "XXX"
+  },
+  "facility_impact_weights": {
+    "nursing_home": "XXX",
+    "hospital": "XXX",
+    "childcare": "XXX",
+    "dialysis": "XXX"
+  },
+  "metadata": {
+    "last_updated": "2025-10-03",
+    "calibration_source": "WA DOH Respiratory Illness Dashboard, CDC RSV-NET, Pierce County Vaccination Data (2024-2025 season)",
+    "calibration_date": "2025-10-03",
+    "population_reference": "Pierce County, WA (928,696 residents)",
+    "data_sources": [
+      "WA DOH respiratory illness surveillance dashboard",
+      "Pierce County demographics (2024)",
+      "WA DOH Table 3: RSV vaccination coverage by county (2024-2025)",
+      "CDC RSV-NET surveillance network",
+      "CDC RSV burden estimates",
+      "WA Health hospital utilization data"
+    ],
+    "notes": "Pierce County calibrated parameters for 2024-2025 RSV season. Very strong seasonal patterns (factor: 3.5, highest of three diseases). Pediatric-focused disease with children 0-17 at 5.0x baseline risk. NEW RSV vaccine available for elderly 75+ (46.1% coverage in Pierce County), but overall population coverage only ~15% due to limited eligibility. Peak: Mid-November through December (weeks 47-52), earlier than flu/COVID. Very low mortality (0.03% CFR), primarily affects infants <6 months and elderly 75+. See Docs/Pierce_County_Disease_Parameters_2025.md for full documentation.",
+    "model_validation": {
+      "r0_calculated": 1.5,
+      "peak_transmission_weeks": [47, 48, 49, 50, 51, 52],
+      "seasonal_amplitude": 3.5,
+      "vaccination_impact": "Limited (15% coverage overall, 46.1% in eligible elderly 75+, new vaccine)",
+      "pediatric_focus": "High (5.0x risk for children 0-17, especially infants <6 months)"
+    }
+  }
+}
+

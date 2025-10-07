@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Access</title>
+</head>
+<body>
+    <h1>Testing Data File Access</h1>
+    <div id="results"></div>
+    
+    <script>
+        const files = [
+            '/washington_tracts_base_optimized.geojson',
+            '/Child_Care_Centers.geojson',
+            '/Nursing_Homes.geojson',
+            '/washington_tracts_poverty.json',
+            '/washington_tracts_race.json',
+            '/washington_tracts_demographics.json',
+            '/washington_tracts_community_risk.json',
+            '/washington_tracts_disability.json'
+        ];
+        
+        const resultsDiv = document.getElementById('results');
+        
+        async function testFile(file) {
+            try {
+                const response = await fetch(file);
+                if (response.ok) {
+                    const data = await response.json();
+                    return `✅ ${file} - OK (${data.features ? data.features.length : 'N/A'} features)`;
+                } else {
+                    return `❌ ${file} - HTTP ${response.status}`;
+                }
+            } catch (error) {
+                return `❌ ${file} - Error: ${error.message}`;
+            }
+        }
+        
+        async function testAllFiles() {
+            const results = await Promise.all(files.map(testFile));
+            resultsDiv.innerHTML = results.map(result => `<div>${result}</div>`).join('');
+        }
+        
+        testAllFiles();
+    </script>
+</body>
+</html>

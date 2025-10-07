@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaflet Map Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        #map { height: 400px; width: 100%; }
+    </style>
+</head>
+<body>
+    <h1>Leaflet Map Test</h1>
+    <div id="map"></div>
+    
+    <script>
+        console.log('Leaflet available:', typeof L !== 'undefined');
+        
+        if (typeof L !== 'undefined') {
+            // Initialize map
+            var map = L.map('map').setView([47.6062, -122.3321], 10);
+            
+            // Add tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+            
+            console.log('Map initialized successfully');
+            
+            // Test loading census tracts
+            fetch('/washington_tracts_base_optimized.geojson')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Census tracts loaded:', data.features.length);
+                    
+                    // Add GeoJSON layer
+                    L.geoJSON(data, {
+                        style: {
+                            fillColor: '#3388ff',
+                            fillOpacity: 0.6,
+                            color: '#ffffff',
+                            weight: 1
+                        }
+                    }).addTo(map);
+                    
+                    console.log('GeoJSON layer added to map');
+                })
+                .catch(error => {
+                    console.error('Error loading census tracts:', error);
+                });
+        } else {
+            console.error('Leaflet not available');
+        }
+    </script>
+</body>
+</html>

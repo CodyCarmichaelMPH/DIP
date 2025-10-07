@@ -1,0 +1,16 @@
+{
+  "topLevel": [
+    "type",
+    "name",
+    "crs",
+    "features"
+  ],
+  "featureKeys": [
+    "type",
+    "properties",
+    "geometry"
+  ],
+  "propertyKeys": [
+    "GEOID20"
+  ]
+}

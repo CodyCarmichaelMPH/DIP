@@ -1,0 +1,7 @@
+Variable,Definition
+Date Range Start,The first day of the epi week (7-day time period for all calculations).
+Date Range End,The Last day of the epi week (7-day time period for all calculations).
+COVID19 7 day Avg Hospitalized,The 7-day average of adult and pediatric patients hospitalized with COVID-19
+COVID19 7 day AVG in ICU bed,The 7-day average of adult and pediatric patients in the intensive care unit (subset of hospitizations) with COVID-19.
+Influenza 7 day Avg Hospitalized,The 7-day average of adult and pediatric patients hospitalized with Influenza
+Influenza 7 day AVG in ICU bed,The 7-day average of adult and pediatric patients in the intensive care unit (subset of hospitizations) with Influenza.

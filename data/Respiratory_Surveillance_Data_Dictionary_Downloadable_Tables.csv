@@ -1,0 +1,17 @@
+Variable Name,Definition
+Week Start,The start of the week date; with Sunday as the start day.
+Week End,The end of the week date; with Saturday as the end day.
+Week,The MMWR week within the respiratory season; with the first week of October as the start week of the season (week 40). MMWR week ranges from 1 to 53 weeks.
+Season,The respiratory season year range; with the season starting the first week of October (week 40) and ending in the last week of September (week 39) the following year.
+Location,"Geographic location of various levels (i.e., WA counties, WA accountable communities of health (ACH) regions, or Statewide)"
+Respiratory Illness Category,"Respiratory illness (i.e., COVID-19, flu, or RSV)"
+Demographic Category,"The demographic category (i.e., overall, age, pediatric age, sex, race, or ethnicity)"
+Demographic,"The specified demographic (e.g., specific age, race, sex, race, or ethnicity group)"
+Death Count To Date,The cumulative death count up to the listed week. The start of the cumulative death count is considered to be the first week of October (Week 40) of the listed season.
+Season Totals for Deaths,Season Totals for Deaths
+Care Type,"The type of care, either hospitalization or emergency care."
+1-Week Percent,"The weekly percentage of respiratory illness (e.g. COVID-19, Flu, or RSV) events by care type (i.e. hospitalizations or emergency visits)"
+1-Week Death Count,The weekly total number of deaths.
+1-Week Death Rate,The weekly death rate.
+dtm_updated,The date and time the data was updated.
+Additional note(s):,The data shown is up to the latest complete week. A complete week spans from Sunday to Saturday (7 days). Flu test and death data has a 1-week lag built in because the data is not available or it is not very complete in the past 1 week(s).

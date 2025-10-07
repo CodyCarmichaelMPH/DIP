@@ -1,0 +1,107 @@
+[
+  {
+    "tract_fips": "53053000100",
+    "age_distribution": {
+      "age_0_4": 0.05,
+      "age_5_17": 0.15,
+      "age_18_49": 0.4,
+      "age_50_64": 0.25,
+      "age_65_plus": 0.15
+    },
+    "svi_percentile": 0.3,
+    "nri_score": 0.4,
+    "disability_rate": 0.1,
+    "poverty_rate": 0.15,
+    "race_distribution": {
+      "white": 0.7,
+      "black": 0.1,
+      "hispanic": 0.1,
+      "asian": 0.1
+    },
+    "transportation_access": 0.8
+  },
+  {
+    "tract_fips": "53053000200",
+    "age_distribution": {
+      "age_0_4": 0.060000000000000005,
+      "age_5_17": 0.16999999999999998,
+      "age_18_49": 0.38,
+      "age_50_64": 0.26,
+      "age_65_plus": 0.16
+    },
+    "svi_percentile": 0.4,
+    "nri_score": 0.5,
+    "disability_rate": 0.12000000000000001,
+    "poverty_rate": 0.18,
+    "race_distribution": {
+      "white": 0.6499999999999999,
+      "black": 0.12000000000000001,
+      "hispanic": 0.12000000000000001,
+      "asian": 0.11
+    },
+    "transportation_access": 0.75
+  },
+  {
+    "tract_fips": "53053000300",
+    "age_distribution": {
+      "age_0_4": 0.07,
+      "age_5_17": 0.19,
+      "age_18_49": 0.36000000000000004,
+      "age_50_64": 0.27,
+      "age_65_plus": 0.16999999999999998
+    },
+    "svi_percentile": 0.5,
+    "nri_score": 0.6000000000000001,
+    "disability_rate": 0.14,
+    "poverty_rate": 0.21,
+    "race_distribution": {
+      "white": 0.6,
+      "black": 0.14,
+      "hispanic": 0.14,
+      "asian": 0.12000000000000001
+    },
+    "transportation_access": 0.7000000000000001
+  },
+  {
+    "tract_fips": "53053000400",
+    "age_distribution": {
+      "age_0_4": 0.08,
+      "age_5_17": 0.21,
+      "age_18_49": 0.34,
+      "age_50_64": 0.28,
+      "age_65_plus": 0.18
+    },
+    "svi_percentile": 0.6000000000000001,
+    "nri_score": 0.7000000000000001,
+    "disability_rate": 0.16,
+    "poverty_rate": 0.24,
+    "race_distribution": {
+      "white": 0.5499999999999999,
+      "black": 0.16,
+      "hispanic": 0.16,
+      "asian": 0.13
+    },
+    "transportation_access": 0.65
+  },
+  {
+    "tract_fips": "53053000500",
+    "age_distribution": {
+      "age_0_4": 0.09,
+      "age_5_17": 0.22999999999999998,
+      "age_18_49": 0.32,
+      "age_50_64": 0.29,
+      "age_65_plus": 0.19
+    },
+    "svi_percentile": 0.7,
+    "nri_score": 0.8,
+    "disability_rate": 0.18,
+    "poverty_rate": 0.27,
+    "race_distribution": {
+      "white": 0.49999999999999994,
+      "black": 0.18,
+      "hispanic": 0.18,
+      "asian": 0.14
+    },
+    "transportation_access": 0.6000000000000001
+  }
+]

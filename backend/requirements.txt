@@ -1,0 +1,38 @@
+# Core dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.4.0
+python-dotenv>=1.0.0
+firebase-admin>=6.2.0
+
+# Disease modeling
+starsim>=0.1.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+geopandas>=0.14.0
+shapely>=2.0.0
+
+# Storage (local file system for Docker deployment)
+# google-cloud-storage>=2.10.0  # Commented out for local Docker deployment
+# google-cloud-firestore>=2.12.0  # Commented out for local Docker deployment
+
+# API client
+httpx>=0.25.0
+requests>=2.31.0
+
+# PDF generation
+reportlab>=4.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+hypothesis>=6.87.0
+
+# Linting and formatting
+ruff>=0.1.0
+black>=23.10.0
+mypy>=1.6.0

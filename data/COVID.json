@@ -1,0 +1,107 @@
+{
+  "disease_name": "COVID-19",
+  "parameters": {
+    "transmissibility_base": "XXX",
+    "r0": "XXX",
+    "incubation_period_days": {
+      "mean": "XXX",
+      "std": "XXX",
+      "sigma": "XXX"
+    },
+    "infectious_period_days": {
+      "mean": "XXX",
+      "std": "XXX",
+      "gamma": "XXX"
+    },
+    "mortality_rate": "XXX",
+    "detection_multiplier": "XXX",
+    "severity": {
+      "age_0_4": "XXX",
+      "age_5_17": "XXX",
+      "age_18_49": "XXX",
+      "age_50_64": "XXX",
+      "age_65_plus": "XXX"
+    },
+    "hospitalization_risk": {
+      "age_0_4": "XXX",
+      "age_5_17": "XXX",
+      "age_18_49": "XXX",
+      "age_50_64": "XXX",
+      "age_65_plus": "XXX"
+    },
+    "variant_multipliers": {
+      "current": "XXX",
+      "previous": "XXX"
+    },
+    "waning_immunity_days": {
+      "natural": "XXX",
+      "vaccine": "XXX"
+    },
+    "vaccine_effectiveness": {
+      "transmission": "XXX",
+      "severity": "XXX"
+    },
+    "seasonal_forcing": {
+      "amplitude": "XXX",
+      "peak_month": "XXX",
+      "seasonal_factor": "XXX",
+      "peak_weeks": "XXX"
+    },
+    "pierce_county_calibrated": {
+      "population_size": 928696,
+      "vaccination_coverage": 0.14,
+      "expected_annual_cases": 46000,
+      "expected_annual_deaths": 23,
+      "case_fatality_rate": 0.0005,
+      "attack_rate": 0.05,
+      "initial_prevalence": 0.0015,
+      "transmission_rate": 0.35,
+      "recovery_rate": 0.10,
+      "mortality_rate": 0.0005,
+      "r0": 3.0,
+      "seasonal_factor": 1.3,
+      "age_specific_risk": {
+        "0-17": 0.5,
+        "18-64": 1.0,
+        "65+": 3.5
+      },
+      "peak_weeks": [48, 49, 50, 51, 52, 1, 2, 3]
+    }
+  },
+  "contact_layers": {
+    "household": "XXX",
+    "workplace": "XXX",
+    "school": "XXX",
+    "community": "XXX",
+    "nursing_home": "XXX",
+    "hospital": "XXX",
+    "childcare": "XXX"
+  },
+  "facility_impact_weights": {
+    "nursing_home": "XXX",
+    "hospital": "XXX",
+    "childcare": "XXX",
+    "dialysis": "XXX"
+  },
+  "metadata": {
+    "last_updated": "2025-10-03",
+    "calibration_source": "WA DOH Respiratory Illness Dashboard, CDC COVID-19 Surveillance, Pierce County Vaccination Data (2024-2025 season)",
+    "calibration_date": "2025-10-03",
+    "population_reference": "Pierce County, WA (928,696 residents)",
+    "data_sources": [
+      "WA DOH respiratory illness surveillance dashboard",
+      "Pierce County demographics (2024)",
+      "WA DOH Table 2: COVID-19 vaccination coverage by county (2024-2025)",
+      "CDC COVID-19 surveillance and Omicron variant parameters",
+      "WA Health hospital utilization data"
+    ],
+    "notes": "Pierce County calibrated parameters for 2025 season. COVID-19 parameters reflect endemic phase with Omicron variants. R0: 2.5-3.5 (using 3.0). Vaccination coverage: 14.0% for 2024-2025 season, 63.3% primary series completion. Mortality significantly reduced due to vaccination and improved treatments. Peak season: December-January (weeks 48-3). See Docs/Pierce_County_Disease_Parameters_2025.md for full documentation.",
+    "model_validation": {
+      "r0_calculated": 3.0,
+      "peak_transmission_weeks": [48, 49, 50, 51, 52, 1, 2, 3],
+      "seasonal_amplitude": 1.3,
+      "vaccination_impact": "Moderate (14% coverage with 2024-2025 vaccine, 63.3% primary series)"
+    }
+  }
+}
+

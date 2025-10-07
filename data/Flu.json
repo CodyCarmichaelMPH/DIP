@@ -1,0 +1,41 @@
+{
+  "name": "Influenza (Flu)",
+  "pierce_county": {
+    "pop": 928696,
+    "vaccine_coverage": 0.265,
+    "annual_cases": 74000,
+    "annual_deaths": 89,
+    "cfr": 0.0012,
+    "r0": 1.3,
+    "transmission": 0.26,
+    "recovery": 0.20,
+    "mortality": 0.0012,
+    "seasonal": 2.1,
+    "peak_weeks": [1, 2, 3, 4, 5]
+  },
+  "age_risk": {
+    "0-4": 1.2,
+    "5-17": 1.2,
+    "18-49": 1.0,
+    "50-64": 1.0,
+    "65+": 4.0
+  },
+  "facilities": {
+    "nursing_home": 2.5,
+    "hospital": 1.8,
+    "childcare": 1.5
+  },
+  "metadata": {
+    "last_updated": "2025-10-03",
+    "calibration_source": "WA DOH Respiratory Illness Dashboard, CDC FluView, Pierce County Vaccination Data (2024-2025 season)",
+    "data_sources": [
+      "WA DOH respiratory illness surveillance dashboard",
+      "WA DOH Table 6: Influenza vaccination coverage by county (2024-2025)",
+      "CDC FluView surveillance network",
+      "WA State 2024-2025 flu season data (422 deaths statewide)"
+    ],
+    "notes": "Pierce County calibrated parameters for 2024-2025 flu season. SEVERE SEASON: Highest flu deaths in WA in over a decade (422 statewide). H1N1 and H3N2 co-circulation. Vaccination coverage: 26.5% (down from 27.3% previous season). Peak: January-early February (weeks 1-5). Late December 2024 spike: 5.6% of ED visits in Pierce County. Elderly at highest risk (4.0x baseline). See Docs/Pierce_County_Disease_Parameters_2025.md for full documentation."
+  },
+  "updated": "2025-10-03"
+}
+

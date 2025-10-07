@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Data Service</title>
+</head>
+<body>
+    <h1>Testing ED Visits Data Loading</h1>
+    <div id="results"></div>
+
+    <script>
+        // Simple test to verify data loading
+        async function testDataLoading() {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                console.log('Testing COVID data loading...');
+                const covidResponse = await fetch('/LocalData/PIERCE_COUNTY_ed_visits_percent.csv');
+                const csvText = await covidResponse.text();
+                
+                // Parse CSV line function (copied from data service)
+                function parseCSVLine(line) {
+                    const result = [];
+                    let current = '';
+                    let inQuotes = false;
+                    
+                    for (let i = 0; i < line.length; i++) {
+                        const char = line[i];
+                        
+                        if (char === '"') {
+                            inQuotes = !inQuotes;
+                        } else if (char === ',' && !inQuotes) {
+                            result.push(current);
+                            current = '';
+                        } else {
+                            current += char;
+                        }
+                    }
+                    
+                    result.push(current);
+                    return result;
+                }
+                
+                function parsePercentage(value) {
+                    if (!value || value.trim() === '') return null;
+                    
+                    const cleanValue = value.replace(/"/g, '').trim();
+                    const num = parseFloat(cleanValue);
+                    
+                    return isNaN(num) ? null : num;
+                }
+                
+                // Parse the data
+                const lines = csvText.split('\n');
+                const headers = parseCSVLine(lines[0]).map(h => h.replace(/"/g, '').trim());
+                
+                console.log('Headers:', headers);
+                
+                const data = [];
+                
+                for (let i = 1; i < Math.min(10, lines.length); i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    
+                    const values = parseCSVLine(line);
+                    if (values.length < headers.length) continue;
+                    
+                    // Parse date
+                    let dateStr = values[values.length - 1].replace(/"/g, '').trim();
+                    if (dateStr.includes('/')) {
+                        const [month, day, year] = dateStr.split('/');
+                        dateStr = `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+                    }
+                    
+                    if (!dateStr) continue;
+                    
+                    // Extract disease percentages
+                    const covidPercent = parsePercentage(values[1]);
+                    const fluPercent = parsePercentage(values[2]);
+                    const rsvPercent = parsePercentage(values[3]);
+                    
+                    console.log(`Row ${i}: Date=${dateStr}, COVID=${covidPercent}, Flu=${fluPercent}, RSV=${rsvPercent}`);
+                    
+                    // Create data points for each disease
+                    if (covidPercent !== null) {
+                        data.push({ date: dateStr, value: covidPercent, disease: 'COVID' });
+                    }
+                    if (fluPercent !== null) {
+                        data.push({ date: dateStr, value: fluPercent, disease: 'Flu' });
+                    }
+                    if (rsvPercent !== null) {
+                        data.push({ date: dateStr, value: rsvPercent, disease: 'RSV' });
+                    }
+                }
+                
+                console.log(`Total data points: ${data.length}`);
+                console.log(`COVID points: ${data.filter(d => d.disease === 'COVID').length}`);
+                console.log(`Flu points: ${data.filter(d => d.disease === 'Flu').length}`);
+                console.log(`RSV points: ${data.filter(d => d.disease === 'RSV').length}`);
+                
+                // Display results
+                resultsDiv.innerHTML = `
+                    <h2>Results:</h2>
+                    <p>Total data points: ${data.length}</p>
+                    <p>COVID points: ${data.filter(d => d.disease === 'COVID').length}</p>
+                    <p>Flu points: ${data.filter(d => d.disease === 'Flu').length}</p>
+                    <p>RSV points: ${data.filter(d => d.disease === 'RSV').length}</p>
+                    <h3>Sample COVID data:</h3>
+                    <ul>
+                        ${data.filter(d => d.disease === 'COVID').slice(0, 5).map(point => 
+                            `<li>${point.date}: ${point.value}%</li>`
+                        ).join('')}
+                    </ul>
+                `;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                resultsDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Run the test when the page loads
+        testDataLoading();
+    </script>
+</body>
+</html>

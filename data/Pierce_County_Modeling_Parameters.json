@@ -1,0 +1,86 @@
+{
+  "population_parameters": {
+    "total_population": 928696,
+    "density_factor": 1.0,
+    "urban_rural_split": 0.872
+  },
+  "vaccination_parameters": {
+    "covid_19": {
+      "primary_series_completion": 0.633,
+      "booster_2023_2024": 0.146,
+      "booster_2024_2025": 0.14
+    },
+    "influenza": {
+      "coverage_2024_2025": 0.265,
+      "coverage_2023_2024": 0.273,
+      "coverage_2022_2023": 0.29,
+      "coverage_2021_2022": 0.285
+    },
+    "rsv": {
+      "adults_75_plus_2024_2025": 0.461
+    }
+  },
+  "disease_parameters": {
+    "covid_19": {
+      "r0": 3.0,
+      "initial_prevalence": 0.0015,
+      "transmission_rate": 0.35,
+      "recovery_rate": 0.10,
+      "mortality_rate": 0.0005,
+      "seasonal_factor": 1.3,
+      "peak_weeks": [48, 49, 50, 51, 52, 1, 2, 3],
+      "expected_annual_cases": 46000,
+      "expected_annual_deaths": 23,
+      "age_specific_risk": {
+        "0-17": 0.5,
+        "18-64": 1.0,
+        "65+": 3.5
+      }
+    },
+    "influenza": {
+      "r0": 1.3,
+      "initial_prevalence": 0.0008,
+      "transmission_rate": 0.26,
+      "recovery_rate": 0.20,
+      "mortality_rate": 0.0012,
+      "seasonal_factor": 2.1,
+      "peak_weeks": [1, 2, 3, 4, 5],
+      "expected_annual_cases": 74000,
+      "expected_annual_deaths": 89,
+      "age_specific_risk": {
+        "0-17": 1.2,
+        "18-64": 1.0,
+        "65+": 4.0
+      }
+    },
+    "rsv": {
+      "r0": 1.5,
+      "initial_prevalence": 0.0005,
+      "transmission_rate": 0.12,
+      "recovery_rate": 0.125,
+      "mortality_rate": 0.0003,
+      "seasonal_factor": 3.5,
+      "peak_weeks": [47, 48, 49, 50, 51, 52],
+      "expected_annual_cases": 23000,
+      "expected_annual_deaths": 7,
+      "age_specific_risk": {
+        "0-17": 5.0,
+        "18-64": 0.3,
+        "65+": 3.0
+      }
+    }
+  },
+  "contact_parameters": {
+    "household_contact_rate": 1.0,
+    "workplace_contact_rate": 0.8,
+    "school_contact_rate": 1.2,
+    "community_contact_rate": 0.6,
+    "healthcare_contact_rate": 0.9
+  },
+  "seasonal_parameters": {
+    "temperature_variation": 45.2,
+    "humidity_variation": 0.34,
+    "indoor_activity_increase": 0.23,
+    "holiday_travel_increase": 0.45
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "county_name": "Pierce County",
+  "state": "Washington",
+  "fips_code": "53053",
+  "population": {
+    "total": 928696,
+    "density_per_sq_mile": 1024.5,
+    "area_sq_miles": 906.0,
+    "urban_percentage": 87.2,
+    "rural_percentage": 12.8
+  },
+  "demographics": {
+    "age_distribution": {
+      "0_4": 0.062,
+      "5_17": 0.158,
+      "18_49": 0.412,
+      "50_64": 0.198,
+      "65_plus": 0.170
+    },
+    "gender_distribution": {
+      "male": 0.492,
+      "female": 0.508
+    },
+    "race_ethnicity": {
+      "white": 0.712,
+      "black": 0.067,
+      "hispanic": 0.108,
+      "asian": 0.078,
+      "native_american": 0.012,
+      "pacific_islander": 0.015,
+      "other": 0.008
+    },
+    "household_characteristics": {
+      "average_household_size": 2.4,
+      "single_person_households": 0.312,
+      "family_households": 0.688,
+      "households_with_children": 0.298
+    }
+  },
+  "socioeconomic_indicators": {
+    "poverty_rate": 0.112,
+    "median_household_income": 67850,
+    "unemployment_rate": 0.045,
+    "education_attainment": {
+      "high_school_or_less": 0.234,
+      "some_college": 0.298,
+      "bachelors_degree": 0.312,
+      "graduate_degree": 0.156
+    },
+    "disability_rate": 0.134,
+    "transportation_access": {
+      "vehicle_ownership": 0.923,
+      "public_transit_usage": 0.067,
+      "walking_commute": 0.023,
+      "biking_commute": 0.012
+    }
+  },
+  "healthcare_infrastructure": {
+    "hospitals": {
+      "total_count": 8,
+      "beds_total": 1247,
+      "icu_beds": 89,
+      "emergency_departments": 12,
+      "trauma_centers": 2
+    },
+    "healthcare_facilities": {
+      "nursing_homes": 23,
+      "dialysis_centers": 12,
+      "childcare_centers": 187,
+      "urgent_care_centers": 15,
+      "pharmacies": 89
+    },
+    "healthcare_workforce": {
+      "physicians_per_1000": 2.8,
+      "nurses_per_1000": 8.4,
+      "hospital_beds_per_1000": 1.34
+    }
+  },
+  "vaccination_coverage": {
+    "covid_19": {
+      "primary_series_completion": 0.633,
+      "booster_2023_2024": 0.146,
+      "booster_2024_2025": 0.140,
+      "by_age_group": {
+        "0_4": 0.072,
+        "5_11": 0.261,
+        "12_17": 0.45,
+        "18_49": 0.65,
+        "50_64": 0.78,
+        "65_plus": 0.89
+      },
+      "by_race": {
+        "white": 0.72,
+        "black": 0.58,
+        "hispanic": 0.61,
+        "asian": 0.78,
+        "native_american": 0.55,
+        "pacific_islander": 0.67
+      },
+      "by_sex": {
+        "male": 0.61,
+        "female": 0.66
+      }
+    },
+    "influenza": {
+      "coverage_2024_2025": 0.265,
+      "coverage_2023_2024": 0.273,
+      "coverage_2022_2023": 0.290,
+      "coverage_2021_2022": 0.285,
+      "by_age_group": {
+        "0_4": 0.38,
+        "5_17": 0.42,
+        "18_49": 0.41,
+        "50_64": 0.52,
+        "65_plus": 0.68
+      },
+      "by_sex": {
+        "male": 0.25,
+        "female": 0.28
+      }
+    },
+    "rsv": {
+      "coverage_2024_2025": 0.15,
+      "adults_75_plus": 0.461,
+      "by_age_group": {
+        "0_4": 0.12,
+        "5_17": 0.08,
+        "18_49": 0.05,
+        "50_64": 0.18,
+        "65_plus": 0.35
+      }
+    }
+  },
+  "disease_surveillance": {
+    "covid_19": {
+      "case_rate_per_100k": 15000,
+      "death_rate_per_100k": 150,
+      "hospitalization_rate_per_100k": 450,
+      "test_positivity_rate": 0.08,
+      "wastewater_surveillance": {
+        "monitoring_sites": 3,
+        "detection_frequency": "weekly",
+        "viral_load_trend": "stable"
+      }
+    },
+    "influenza": {
+      "case_rate_per_100k": 8000,
+      "death_rate_per_100k": 25,
+      "hospitalization_rate_per_100k": 180,
+      "test_positivity_rate": 0.12,
+      "seasonal_pattern": "winter_peak"
+    },
+    "rsv": {
+      "case_rate_per_100k": 2000,
+      "death_rate_per_100k": 2,
+      "hospitalization_rate_per_100k": 45,
+      "test_positivity_rate": 0.15,
+      "seasonal_pattern": "winter_spring_peak"
+    }
+  },
+  "geographic_characteristics": {
+    "census_tracts": 245,
+    "zip_codes": 47,
+    "school_districts": 12,
+    "major_cities": [
+      "Tacoma",
+      "Lakewood",
+      "Puyallup",
+      "Spanaway",
+      "University Place"
+    ],
+    "transportation_hubs": {
+      "airports": 1,
+      "transit_stations": 23,
+      "highway_interchanges": 15,
+      "rail_stations": 8
+    }
+  },
+  "risk_factors": {
+    "environmental": {
+      "air_quality_index": 45,
+      "water_quality_score": 92,
+      "green_space_percentage": 23.4,
+      "urban_heat_island_effect": "moderate"
+    },
+    "social_determinants": {
+      "food_insecurity_rate": 0.089,
+      "housing_instability_rate": 0.034,
+      "social_isolation_index": 0.156,
+      "community_cohesion_score": 0.67
+    },
+    "vulnerable_populations": {
+      "homeless_population": 1847,
+      "incarcerated_population": 2341,
+      "migrant_worker_population": 892,
+      "refugee_population": 1234
+    }
+  },
+  "modeling_parameters": {
+    "contact_rates": {
+      "household": 1.0,
+      "workplace": 0.8,
+      "school": 1.2,
+      "community": 0.6,
+      "healthcare": 0.9,
+      "transportation": 0.4
+    },
+    "mobility_patterns": {
+      "daily_commuters": 0.67,
+      "remote_workers": 0.23,
+      "students": 0.158,
+      "retirees": 0.170,
+      "unemployed": 0.045
+    },
+    "seasonal_factors": {
+      "temperature_variation": 45.2,
+      "humidity_variation": 0.34,
+      "indoor_activity_increase": 0.23,
+      "holiday_travel_increase": 0.45
+    }
+  },
+  "data_sources": {
+    "demographics": [
+      "US Census Bureau 2020",
+      "American Community Survey 2023",
+      "Washington State Office of Financial Management"
+    ],
+    "health_data": [
+      "Washington State Department of Health",
+      "Pierce County Health Department",
+      "CDC National Center for Health Statistics"
+    ],
+    "vaccination_data": [
+      "WA DOH Immunization Information System",
+      "CDC COVID-19 Vaccination Coverage",
+      "CDC FluVaxView"
+    ],
+    "facility_data": [
+      "Washington State Department of Health",
+      "Centers for Medicare & Medicaid Services",
+      "Washington State Department of Children, Youth & Families"
+    ]
+  },
+  "metadata": {
+    "last_updated": "2025-01-27",
+    "data_collection_period": "2020-2025",
+    "geographic_scope": "Pierce County, Washington",
+    "population_estimate_date": "2024-07-01",
+    "notes": "Comprehensive county profile for disease modeling, including demographics, healthcare infrastructure, vaccination coverage, and risk factors. Data aggregated from multiple state and federal sources.",
+    "modeling_ready": true,
+    "seir_parameters_available": true,
+    "seasonal_data_available": true,
+    "vaccination_data_available": true
+  }
+}
